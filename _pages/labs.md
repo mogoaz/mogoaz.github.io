@@ -64,6 +64,43 @@ permalink: /labs/
 
       </article>
 
+
+      <article class="portfolio-project">
+
+        <span class="portfolio-card-number">
+          02
+        </span>
+
+        <h3>
+          Building & Tuning a SIEM From the Ground Up
+        </h3>
+
+        <p>
+
+          Deploying Wazuh across a mixed fleet, building custom
+          detection coverage, and a firewall rule that looked
+          correct but wasn't actually blocking anything, until the
+          real layer was found.
+
+        </p>
+
+        <div class="portfolio-tags">
+
+          <span class="portfolio-tag">Wazuh</span>
+          <span class="portfolio-tag">fail2ban</span>
+          <span class="portfolio-tag">Network Security</span>
+
+        </div>
+
+        <a
+          class="portfolio-project-link"
+          href="/labs/wazuh-siem-tuning/"
+        >
+          Read writeup →
+        </a>
+
+      </article>
+
     </div>
 
   </div>
