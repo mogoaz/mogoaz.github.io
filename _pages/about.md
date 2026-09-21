@@ -94,22 +94,35 @@ permalink: /about/
 
     <div style="margin-top: 70px;">
 
+      <span class="portfolio-label">
+        Field Notes
+      </span>
+
       <h2>
-        My personal brand
+        The question behind the work.
       </h2>
 
       <p class="portfolio-description">
 
-        I build and secure reliable systems.
+        Every system tells a story if you know where to look — a
+        spike in auth failures, a process that shouldn't be
+        talking to the internet, a dashboard that's a little too
+        quiet. I got into engineering because I liked building
+        things that worked. I stayed for the harder question:
+        what does it take to keep them working when someone is
+        actively trying to break them?
 
       </p>
 
       <p class="portfolio-description">
 
-        I want my work to demonstrate that security is not
-        separate from engineering. Understanding how systems,
-        networks, applications, infrastructure, and telemetry
-        work creates a stronger foundation for securing them.
+        That question is what turned me from someone who builds
+        systems into someone who
+        <span class="portfolio-gradient">defends them</span> —
+        and it's the same one pointing toward what's next: making
+        real security practices accessible to organizations that
+        have never had a security team, not just the ones who can
+        afford one.
 
       </p>
 

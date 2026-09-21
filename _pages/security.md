@@ -13,139 +13,123 @@ permalink: /security/
     </span>
 
     <h2>
-      Security engineering, grounded in how systems actually work.
+      How I approach security engineering.
     </h2>
 
     <p class="portfolio-description">
 
-      I approach security as an extension of engineering, not a
-      layer bolted on afterward. Understanding how applications,
-      networks, and infrastructure are built makes it possible to
-      secure them properly.
+      Security isn't a checklist I run once — it's a discipline
+      applied to how systems are built, watched, and improved
+      over time. As the person leading security at Nathan Claire
+      Group (NCG), that means owning the company's security
+      architecture as a whole, not just individual tools. Here's
+      the process behind that, and the toolkit that supports it.
 
     </p>
 
 
-    <div class="portfolio-grid">
+    <div style="margin-top: 60px;">
 
-      <article class="portfolio-card">
+      <h2>
+        My Approach
+      </h2>
 
-        <span class="portfolio-card-number">
-          01
-        </span>
+      <p class="portfolio-description">
 
-        <h3>
-          Detection Engineering
-        </h3>
+        Four things I come back to on every piece of security
+        work, roughly in this order.
 
-        <p>
+      </p>
 
-          SIEM deployment, custom detection rules, endpoint
-          telemetry (Sysmon, Auditd), and incident investigation.
+      <div class="portfolio-grid">
 
-        </p>
+        <article class="portfolio-card">
 
-      </article>
+          <span class="portfolio-card-number">
+            01 · SEE
+          </span>
 
+          <h3>
+            Build Visibility First
+          </h3>
 
-      <article class="portfolio-card">
+          <p>
 
-        <span class="portfolio-card-number">
-          02
-        </span>
+            You can't secure what you can't see. Before anything
+            else, I get telemetry flowing — endpoint events,
+            network traffic, application logs — so the
+            environment is observable end to end.
 
-        <h3>
-          DevSecOps
-        </h3>
+          </p>
 
-        <p>
-
-          Embedding security scanning — SAST, dependency, and
-          container scanning — directly into CI/CD pipelines.
-
-        </p>
-
-      </article>
+        </article>
 
 
-      <article class="portfolio-card">
+        <article class="portfolio-card">
 
-        <span class="portfolio-card-number">
-          03
-        </span>
+          <span class="portfolio-card-number">
+            02 · DETECT
+          </span>
 
-        <h3>
-          Network & Infrastructure Security
-        </h3>
+          <h3>
+            Tune Detection to the Environment
+          </h3>
 
-        <p>
+          <p>
 
-          Network visibility, traffic analysis, hardening, and
-          defensive controls across monitored infrastructure.
+            Default rule sets catch generic threats. Real
+            detection comes from rules tuned to how this specific
+            environment behaves, so alerts are signal, not noise.
 
-        </p>
+          </p>
 
-      </article>
-
-
-      <article class="portfolio-card">
-
-        <span class="portfolio-card-number">
-          04
-        </span>
-
-        <h3>
-          Vulnerability Management
-        </h3>
-
-        <p>
-
-          Identifying, prioritizing, and tracking vulnerabilities
-          across infrastructure and application surfaces.
-
-        </p>
-
-      </article>
+        </article>
 
 
-      <article class="portfolio-card">
+        <article class="portfolio-card">
 
-        <span class="portfolio-card-number">
-          05
-        </span>
+          <span class="portfolio-card-number">
+            03 · RESPOND
+          </span>
 
-        <h3>
-          Compliance-Driven Security
-        </h3>
+          <h3>
+            Investigate, Don't Just Alert
+          </h3>
 
-        <p>
+          <p>
 
-          Building security controls and monitoring programs
-          aligned to frameworks like SOC 2 and ISO 27001.
+            An alert nobody investigates isn't security — it's
+            noise with a timestamp. I build the workflows needed
+            to actually close the loop on what gets flagged.
 
-        </p>
+          </p>
 
-      </article>
+        </article>
 
 
-      <article class="portfolio-card">
+        <article class="portfolio-card">
 
-        <span class="portfolio-card-number">
-          06
-        </span>
+          <span class="portfolio-card-number">
+            04 · HARDEN
+          </span>
 
-        <h3>
-          Cloud Security
-        </h3>
+          <h3>
+            Reduce the Attack Surface
+          </h3>
 
-        <p>
+          <p>
 
-          Securing cloud infrastructure, workloads, identity, and
-          network controls in cloud-native environments.
+            In practice: hardening production servers — closing
+            unnecessary services, enforcing least-privilege access,
+            patching known vulnerabilities — and building
+            auto-remediation so common alert types get contained
+            automatically instead of waiting on manual response.
 
-        </p>
+          </p>
 
-      </article>
+        </article>
+
+      </div>
 
     </div>
 
@@ -153,17 +137,123 @@ permalink: /security/
     <div style="margin-top: 70px;">
 
       <h2>
-        Guiding principle
+        Toolkit
       </h2>
 
       <p class="portfolio-description">
 
-        Visibility comes first. Most security programs fail not
-        because of missing tools, but because of missing
-        visibility into what's actually happening across systems.
-        My work starts there.
+        Grouped by where each one fits in the stack.
 
       </p>
+
+      <div style="margin-top: 30px;">
+
+        <h3 style="color: var(--heading); font-size: 1.05rem; margin-bottom: 14px;">
+          Detection & SIEM
+        </h3>
+
+        <div class="portfolio-tags">
+
+          <span class="portfolio-tag">Wazuh</span>
+          <span class="portfolio-tag">Sysmon</span>
+          <span class="portfolio-tag">Auditd</span>
+          <span class="portfolio-tag">fail2ban</span>
+          <span class="portfolio-tag">Auto-Remediation</span>
+          <span class="portfolio-tag">Server Hardening</span>
+
+        </div>
+
+      </div>
+
+      <div style="margin-top: 26px;">
+
+        <h3 style="color: var(--heading); font-size: 1.05rem; margin-bottom: 14px;">
+          DevSecOps & Pipeline Security
+        </h3>
+
+        <div class="portfolio-tags">
+
+          <span class="portfolio-tag">Semgrep</span>
+          <span class="portfolio-tag">Trivy</span>
+          <span class="portfolio-tag">GitHub Actions</span>
+          <span class="portfolio-tag">OWASP ZAP</span>
+
+        </div>
+
+      </div>
+
+      <div style="margin-top: 26px;">
+
+        <h3 style="color: var(--heading); font-size: 1.05rem; margin-bottom: 14px;">
+          Network & Cloud
+        </h3>
+
+        <div class="portfolio-tags">
+
+          <span class="portfolio-tag">Go</span>
+          <span class="portfolio-tag">Network Monitoring</span>
+          <span class="portfolio-tag">Cloud Security</span>
+          <span class="portfolio-tag">REST APIs</span>
+
+        </div>
+
+      </div>
+
+      <div style="margin-top: 26px;">
+
+        <h3 style="color: var(--heading); font-size: 1.05rem; margin-bottom: 14px;">
+          Observability
+        </h3>
+
+        <div class="portfolio-tags">
+
+          <span class="portfolio-tag">Dynatrace</span>
+          <span class="portfolio-tag">APM</span>
+          <span class="portfolio-tag">DQL</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div style="margin-top: 70px;">
+
+      <h2>
+        Standards I Build Against
+      </h2>
+
+      <p class="portfolio-description">
+
+        Much of my recent work has meant aligning monitoring and
+        controls to <strong>SOC 2 Type II</strong> and
+        <strong>ISO 27001:2022</strong> — not as a paperwork
+        exercise, but as a forcing function for building the
+        visibility and controls that make an environment
+        genuinely more defensible.
+
+      </p>
+
+    </div>
+
+
+    <div style="margin-top: 70px; text-align: center;">
+
+      <h2>
+        Have a security problem worth talking through?
+      </h2>
+
+      <div class="portfolio-buttons" style="justify-content: center;">
+
+        <a
+          class="portfolio-button portfolio-button-primary"
+          href="/contact/"
+        >
+          Get In Touch
+        </a>
+
+      </div>
 
     </div>
 

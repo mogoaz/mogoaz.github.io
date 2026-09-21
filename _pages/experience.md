@@ -13,7 +13,7 @@ permalink: /experience/
     </span>
 
     <h2>
-      A path from product engineering into security engineering.
+      Leading security, after a path through product engineering.
     </h2>
 
     <p class="portfolio-description">
@@ -24,6 +24,25 @@ permalink: /experience/
       engineering, DevSecOps, and infrastructure observability.
 
     </p>
+
+
+    <div style="margin-top: 40px;">
+
+      <h2>
+        Current Role
+      </h2>
+
+      <p class="portfolio-description">
+
+        I lead security at <strong>Nathan Claire Group (NCG)</strong>,
+        where I'm responsible for designing the company's security
+        architecture end to end — not just operating individual
+        tools, but deciding how detection, response, and
+        infrastructure hardening fit together as one program.
+
+      </p>
+
+    </div>
 
 
     <div class="portfolio-grid">
@@ -90,6 +109,27 @@ permalink: /experience/
 
       </article>
 
+
+      <article class="portfolio-card">
+
+        <span class="portfolio-card-number">
+          FOCUS
+        </span>
+
+        <h3>
+          Server Hardening
+        </h3>
+
+        <p>
+
+          Reducing attack surface across production servers —
+          closing unnecessary services, enforcing least-privilege
+          access, and staying ahead of known vulnerabilities.
+
+        </p>
+
+      </article>
+
     </div>
 
 
@@ -111,6 +151,7 @@ permalink: /experience/
 
         <span class="portfolio-tag">CompTIA Security+ (in progress)</span>
         <span class="portfolio-tag">AfricaHackon Academy</span>
+        <span class="portfolio-tag">Cyber Shujaa — Network & Cloud Engineering</span>
 
       </div>
 
