@@ -34,8 +34,8 @@ permalink: /projects/wazuh/
 
       <p class="portfolio-description">
 
-        Before this work, security visibility was fragmented —
-        authentication events, file changes, and vulnerability
+        Before this work, security visibility was fragmented.
+        Authentication events, file changes, and vulnerability
         status lived in different places, if they were being
         captured at all. Investigating anything meant piecing
         together logs by hand across multiple systems, which is
@@ -123,7 +123,7 @@ permalink: /projects/wazuh/
 
           Actively building automated response workflows that
           act on common alert types without waiting for manual
-          triage — cutting the time between detection and
+          triage, cutting the time between detection and
           containment.
 
         </p>
@@ -147,9 +147,9 @@ permalink: /projects/wazuh/
         Wazuh manager. Sysmon extends visibility into process and
         network activity on Windows; Auditd does the same on
         Linux. Custom detection rules sit on top of the default
-        ruleset to catch patterns specific to the environment —
+        ruleset to catch patterns specific to the environment:
         repeated failed logins from a single source, unexpected
-        process behavior, unauthorized file changes — with alerts
+        process behavior, unauthorized file changes, with alerts
         routed to a monitoring channel for investigation.
 
       </p>
@@ -157,11 +157,11 @@ permalink: /projects/wazuh/
       <p class="portfolio-description">
 
         The current phase of this work is closing the loop
-        further with auto-remediation — response actions
-        (containment steps like isolating a host or blocking a
-        source) triggered automatically for well-understood alert
-        types, so response no longer depends entirely on someone
-        being available to act on an alert in real time.
+        further with auto-remediation, triggering containment
+        steps like isolating a host or blocking a source
+        automatically for well-understood alert types, so
+        response no longer depends entirely on someone being
+        available to act on an alert in real time.
 
       </p>
 
@@ -208,7 +208,7 @@ permalink: /projects/wazuh/
 
       <p class="portfolio-description">
 
-        It also taught me that tooling is only half the job — a
+        It also taught me that tooling is only half the job. A
         SIEM is only as useful as the rules tuned to your
         environment and the discipline to actually act on what it
         surfaces. Getting from "alerts exist" to "alerts get

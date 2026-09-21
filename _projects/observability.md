@@ -34,7 +34,7 @@ permalink: /projects/observability/
       <p class="portfolio-description">
 
         When something slows down in production, the real
-        question is rarely "is it slow" — it's "where, for whom,
+        question is rarely "is it slow." It's "where, for whom,
         and since when." Without metrics, logs, and traces tied
         together, answering that meant jumping between disconnected
         tools and guessing at correlation instead of seeing it
@@ -168,7 +168,7 @@ permalink: /projects/observability/
       <p class="portfolio-description">
 
         It also reinforced how much of observability is really
-        about baselines, not thresholds — a fixed alert that made
+        about baselines, not thresholds. A fixed alert that made
         sense on day one becomes either useless or a source of
         alert fatigue once real traffic patterns settle in.
 

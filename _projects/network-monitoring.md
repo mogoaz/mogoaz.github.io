@@ -34,8 +34,8 @@ permalink: /projects/network-monitoring/
 
       <p class="portfolio-description">
 
-        Network problems — latency spikes, packet loss, DNS
-        resolution failures — often show up first as vague user
+        Network problems, like latency spikes, packet loss, or DNS
+        resolution failures, often show up first as vague user
         complaints, with no easy way to correlate them to what's
         actually happening at the network layer in real time.
         Off-the-shelf tools either cost more than the problem
@@ -121,8 +121,8 @@ permalink: /projects/network-monitoring/
 
         The agent, written in Go, runs on monitored
         infrastructure and combines two approaches: active
-        probing — scheduled checks against key targets to
-        measure reachability and latency — with passive
+        probing (scheduled checks against key targets to
+        measure reachability and latency) with passive
         observation of local network interfaces, socket state,
         and DNS resolution. Collected telemetry is persisted to
         PostgreSQL and exposed through a REST API, so it can be
@@ -169,7 +169,7 @@ permalink: /projects/network-monitoring/
       <p class="portfolio-description">
 
         Writing it in Go also forced discipline around
-        concurrency — probing dozens of targets on independent
+        concurrency. Probing dozens of targets on independent
         schedules without one slow check blocking the rest meant
         thinking carefully about goroutines, timeouts, and
         failure isolation from the start.

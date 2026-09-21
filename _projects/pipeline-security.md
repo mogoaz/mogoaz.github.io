@@ -20,7 +20,7 @@ permalink: /projects/pipeline-security/
 
       A security engineering project focused on introducing
       automated security checks directly into the software
-      delivery lifecycle — currently being integrated into the
+      delivery lifecycle, currently being integrated into the
       CI/CD pipeline so scans run as a normal part of every build,
       not as a separate manual step.
 
@@ -36,8 +36,8 @@ permalink: /projects/pipeline-security/
       <p class="portfolio-description">
 
         Security issues in code, dependencies, and container
-        images were traditionally caught late — sometimes after
-        deployment — simply because security review wasn't part
+        images were traditionally caught late, sometimes after
+        deployment, simply because security review wasn't part
         of the everyday delivery workflow. By the time an issue
         surfaced, it was already more expensive to fix.
 
@@ -117,7 +117,7 @@ permalink: /projects/pipeline-security/
         databases before they ship. Container images are scanned
         for known CVEs in base images and installed packages
         before deployment. Findings surface directly inside the
-        CI/CD pipeline, so they're visible before code ships —
+        CI/CD pipeline, so they're visible before code ships,
         not after.
 
       </p>
@@ -154,7 +154,7 @@ permalink: /projects/pipeline-security/
       <p class="portfolio-description">
 
         Wiring security scanning into CI/CD is the easy part.
-        The harder part is tuning it — a scanner that floods
+        The harder part is tuning it. A scanner that floods
         developers with low-value findings gets ignored, and one
         that's too quiet gives false confidence. Getting the
         signal-to-noise ratio right, and getting findings in
