@@ -1,7 +1,1606 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
-author_profile: true
+author_profile: false
 ---
+
+<style>
+/* =========================================================
+   PERSONAL PORTFOLIO — MOGOA
+   Minimal Mistakes / Jekyll
+   ========================================================= */
+
+:root {
+  --portfolio-bg: #0b1120;
+  --portfolio-bg-soft: #111827;
+  --portfolio-card: #151e2e;
+  --portfolio-border: rgba(148, 163, 184, 0.16);
+  --portfolio-text: #e5e7eb;
+  --portfolio-muted: #94a3b8;
+  --portfolio-heading: #f8fafc;
+  --portfolio-accent: #38bdf8;
+  --portfolio-accent-dark: #0ea5e9;
+  --portfolio-green: #34d399;
+  --portfolio-purple: #a78bfa;
+  --portfolio-orange: #fb923c;
+  --portfolio-max: 1180px;
+}
+
+/* ---------- Global ---------- */
+
+.portfolio-page {
+  width: 100%;
+  background: var(--portfolio-bg);
+  color: var(--portfolio-text);
+  margin-top: -1rem;
+}
+
+.portfolio-page * {
+  box-sizing: border-box;
+}
+
+.portfolio-container {
+  width: min(100% - 40px, var(--portfolio-max));
+  margin: 0 auto;
+}
+
+.portfolio-section {
+  padding: 90px 0;
+}
+
+.portfolio-section + .portfolio-section {
+  border-top: 1px solid var(--portfolio-border);
+}
+
+.portfolio-section-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--portfolio-accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.portfolio-section-title {
+  margin: 0 0 18px;
+  color: var(--portfolio-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.portfolio-section-description {
+  max-width: 760px;
+  margin-bottom: 45px;
+  color: var(--portfolio-muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* ---------- Hero ---------- */
+
+.portfolio-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 760px;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(56, 189, 248, 0.12), transparent 30%),
+    radial-gradient(circle at 20% 80%, rgba(167, 139, 250, 0.08), transparent 30%),
+    var(--portfolio-bg);
+}
+
+.portfolio-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.22;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+}
+
+.portfolio-hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 100px 0;
+}
+
+.portfolio-availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 28px;
+  padding: 8px 14px;
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  border-radius: 999px;
+  background: rgba(52, 211, 153, 0.07);
+  color: #a7f3d0;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.portfolio-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--portfolio-green);
+  box-shadow: 0 0 12px rgba(52, 211, 153, 0.8);
+}
+
+.portfolio-hero h1 {
+  max-width: 950px;
+  margin: 0;
+  color: var(--portfolio-heading);
+  font-size: clamp(3.2rem, 7vw, 6.4rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  font-weight: 900;
+}
+
+.portfolio-gradient-text {
+  background: linear-gradient(
+    90deg,
+    var(--portfolio-accent),
+    #60a5fa,
+    var(--portfolio-purple)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.portfolio-hero-subtitle {
+  max-width: 780px;
+  margin: 30px 0 0;
+  color: #cbd5e1;
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  line-height: 1.8;
+}
+
+.portfolio-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 38px;
+}
+
+.portfolio-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  text-decoration: none !important;
+  font-size: 0.92rem;
+  font-weight: 800;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.portfolio-button:hover {
+  transform: translateY(-2px);
+}
+
+.portfolio-button-primary {
+  background: var(--portfolio-accent);
+  color: #082f49 !important;
+}
+
+.portfolio-button-primary:hover {
+  background: #7dd3fc;
+}
+
+.portfolio-button-secondary {
+  border-color: rgba(148, 163, 184, 0.3);
+  background: rgba(15, 23, 42, 0.7);
+  color: var(--portfolio-text) !important;
+}
+
+.portfolio-button-secondary:hover {
+  border-color: var(--portfolio-accent);
+}
+
+.portfolio-terminal {
+  margin-top: 65px;
+  max-width: 820px;
+  overflow: hidden;
+  border: 1px solid var(--portfolio-border);
+  border-radius: 12px;
+  background: #080d18;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+}
+
+.portfolio-terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--portfolio-border);
+  background: #0f172a;
+}
+
+.portfolio-terminal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #475569;
+}
+
+.portfolio-terminal-title {
+  margin-left: 8px;
+  color: #64748b;
+  font-size: 0.75rem;
+}
+
+.portfolio-terminal-body {
+  padding: 22px;
+  color: #a7f3d0;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.88rem;
+  line-height: 1.9;
+}
+
+.portfolio-terminal-command {
+  color: #38bdf8;
+}
+
+.portfolio-terminal-value {
+  color: #e2e8f0;
+}
+
+/* ---------- About ---------- */
+
+.portfolio-about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.portfolio-about-text p {
+  color: var(--portfolio-muted);
+  font-size: 1.02rem;
+  line-height: 1.9;
+}
+
+.portfolio-highlight-box {
+  padding: 30px;
+  border: 1px solid var(--portfolio-border);
+  border-radius: 14px;
+  background: linear-gradient(
+    145deg,
+    rgba(56, 189, 248, 0.06),
+    rgba(167, 139, 250, 0.04)
+  );
+}
+
+.portfolio-highlight-box h3 {
+  margin-top: 0;
+  color: var(--portfolio-heading);
+}
+
+.portfolio-highlight-list {
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.portfolio-highlight-list li {
+  position: relative;
+  margin-bottom: 15px;
+  padding-left: 24px;
+  color: var(--portfolio-muted);
+  line-height: 1.6;
+}
+
+.portfolio-highlight-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--portfolio-accent);
+  font-weight: 800;
+}
+
+/* ---------- Focus Areas ---------- */
+
+.portfolio-focus-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.portfolio-focus-card {
+  padding: 28px;
+  min-height: 220px;
+  border: 1px solid var(--portfolio-border);
+  border-radius: 14px;
+  background: var(--portfolio-card);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.portfolio-focus-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.portfolio-focus-icon {
+  margin-bottom: 22px;
+  color: var(--portfolio-accent);
+  font-size: 1.7rem;
+}
+
+.portfolio-focus-card h3 {
+  margin: 0 0 10px;
+  color: var(--portfolio-heading);
+  font-size: 1.1rem;
+}
+
+.portfolio-focus-card p {
+  margin: 0;
+  color: var(--portfolio-muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* ---------- Projects ---------- */
+
+.portfolio-projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.portfolio-project {
+  position: relative;
+  overflow: hidden;
+  padding: 32px;
+  border: 1px solid var(--portfolio-border);
+  border-radius: 16px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(30, 41, 59, 0.8),
+      rgba(15, 23, 42, 0.9)
+    );
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.portfolio-project:hover {
+  transform: translateY(-5px);
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.portfolio-project-featured {
+  grid-column: span 2;
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(56, 189, 248, 0.09),
+      transparent 30%
+    ),
+    linear-gradient(145deg, #162235, #0f172a);
+}
+
+.portfolio-project-number {
+  color: var(--portfolio-accent);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.portfolio-project h3 {
+  margin: 14px 0 12px;
+  color: var(--portfolio-heading);
+  font-size: 1.55rem;
+}
+
+.portfolio-project p {
+  max-width: 800px;
+  color: var(--portfolio-muted);
+  line-height: 1.8;
+}
+
+.portfolio-project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 22px 0;
+}
+
+.portfolio-tag {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 5px;
+  background: rgba(15, 23, 42, 0.7);
+  color: #cbd5e1;
+  font-size: 0.73rem;
+  font-weight: 700;
+}
+
+.portfolio-project-link {
+  color: var(--portfolio-accent);
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-decoration: none !important;
+}
+
+.portfolio-project-link:hover {
+  color: #7dd3fc;
+}
+
+/* ---------- Security Work ---------- */
+
+.portfolio-security-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.portfolio-security-item {
+  padding: 30px;
+  border-left: 3px solid var(--portfolio-accent);
+  border-top: 1px solid var(--portfolio-border);
+  border-right: 1px solid var(--portfolio-border);
+  border-bottom: 1px solid var(--portfolio-border);
+  border-radius: 0 12px 12px 0;
+  background: var(--portfolio-card);
+}
+
+.portfolio-security-item h3 {
+  margin-top: 0;
+  color: var(--portfolio-heading);
+}
+
+.portfolio-security-item p {
+  color: var(--portfolio-muted);
+  line-height: 1.8;
+}
+
+.portfolio-security-item ul {
+  color: var(--portfolio-muted);
+  line-height: 1.8;
+}
+
+/* ---------- Skills ---------- */
+
+.portfolio-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.portfolio-skill {
+  padding: 10px 15px;
+  border: 1px solid var(--portfolio-border);
+  border-radius: 8px;
+  background: var(--portfolio-card);
+  color: #cbd5e1;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* ---------- Journey ---------- */
+
+.portfolio-timeline {
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.portfolio-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  width: 1px;
+  background: var(--portfolio-border);
+}
+
+.portfolio-timeline-item {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 42px;
+}
+
+.portfolio-timeline-dot {
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  width: 11px;
+  height: 11px;
+  border: 2px solid var(--portfolio-bg);
+  border-radius: 50%;
+  background: var(--portfolio-accent);
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.12);
+}
+
+.portfolio-timeline-date {
+  color: var(--portfolio-accent);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.portfolio-timeline-item h3 {
+  margin: 8px 0;
+  color: var(--portfolio-heading);
+}
+
+.portfolio-timeline-item p {
+  margin: 0;
+  color: var(--portfolio-muted);
+  line-height: 1.8;
+}
+
+/* ---------- CTA ---------- */
+
+.portfolio-contact {
+  text-align: center;
+  padding: 110px 0;
+  background:
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(56, 189, 248, 0.1),
+      transparent 45%
+    );
+}
+
+.portfolio-contact h2 {
+  max-width: 750px;
+  margin: 0 auto 18px;
+  color: var(--portfolio-heading);
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.1;
+}
+
+.portfolio-contact p {
+  max-width: 650px;
+  margin: 0 auto 32px;
+  color: var(--portfolio-muted);
+  line-height: 1.8;
+}
+
+/* ---------- Footer ---------- */
+
+.portfolio-footer {
+  padding: 30px 0;
+  border-top: 1px solid var(--portfolio-border);
+  background: #080d18;
+}
+
+.portfolio-footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.portfolio-footer p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.82rem;
+}
+
+.portfolio-footer-links {
+  display: flex;
+  gap: 18px;
+}
+
+.portfolio-footer-links a {
+  color: #94a3b8;
+  text-decoration: none !important;
+  font-size: 0.82rem;
+}
+
+.portfolio-footer-links a:hover {
+  color: var(--portfolio-accent);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1000px) {
+  .portfolio-focus-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-about-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+}
+
+@media (max-width: 800px) {
+  .portfolio-projects {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-project-featured {
+    grid-column: span 1;
+  }
+
+  .portfolio-security-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-hero {
+    min-height: auto;
+  }
+
+  .portfolio-hero-content {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-container {
+    width: min(100% - 28px, var(--portfolio-max));
+  }
+
+  .portfolio-section {
+    padding: 65px 0;
+  }
+
+  .portfolio-focus-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-hero h1 {
+    font-size: 3.1rem;
+  }
+
+  .portfolio-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .portfolio-button {
+    width: 100%;
+  }
+
+  .portfolio-footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
+
+
+<div class="portfolio-page">
+
+  <!-- =====================================================
+       HERO
+       ===================================================== -->
+
+  <section class="portfolio-hero">
+    <div class="portfolio-container">
+      <div class="portfolio-hero-content">
+
+        <div class="portfolio-availability">
+          <span class="portfolio-status-dot"></span>
+          Building in Cloud &amp; Network Security
+        </div>
+
+        <h1>
+          I build and secure
+          <span class="portfolio-gradient-text">
+            reliable systems.
+          </span>
+        </h1>
+
+        <p class="portfolio-hero-subtitle">
+          I am a Product Engineer focused on cloud and network security,
+          infrastructure observability, security monitoring, and resilient
+          systems. I combine software engineering, networking, monitoring,
+          and cybersecurity to solve real-world technical problems.
+        </p>
+
+        <div class="portfolio-hero-actions">
+          <a
+            class="portfolio-button portfolio-button-primary"
+            href="#projects"
+          >
+            View My Projects
+          </a>
+
+          <a
+            class="portfolio-button portfolio-button-secondary"
+            href="#contact"
+          >
+            Get In Touch
+          </a>
+        </div>
+
+
+        <!-- Terminal-style identity -->
+
+        <div class="portfolio-terminal">
+          <div class="portfolio-terminal-header">
+            <span class="portfolio-terminal-dot"></span>
+            <span class="portfolio-terminal-dot"></span>
+            <span class="portfolio-terminal-dot"></span>
+            <span class="portfolio-terminal-title">
+              ~/portfolio
+            </span>
+          </div>
+
+          <div class="portfolio-terminal-body">
+            <div>
+              <span class="portfolio-terminal-command">$ whoami</span>
+            </div>
+
+            <div>
+              <span class="portfolio-terminal-value">
+                Product Engineer → Security Engineer
+              </span>
+            </div>
+
+            <br>
+
+            <div>
+              <span class="portfolio-terminal-command">$ focus</span>
+            </div>
+
+            <div>
+              <span class="portfolio-terminal-value">
+                Cloud Security | Network Security | Detection Engineering
+              </span>
+            </div>
+
+            <br>
+
+            <div>
+              <span class="portfolio-terminal-command">$ mission</span>
+            </div>
+
+            <div>
+              <span class="portfolio-terminal-value">
+                Build. Monitor. Detect. Secure.
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       ABOUT
+       ===================================================== -->
+
+  <section class="portfolio-section" id="about">
+    <div class="portfolio-container">
+
+      <span class="portfolio-section-label">01 — About</span>
+
+      <h2 class="portfolio-section-title">
+        Engineering with security in mind.
+      </h2>
+
+      <div class="portfolio-about-grid">
+
+        <div class="portfolio-about-text">
+
+          <p>
+            I am a Product Engineer with a growing specialization in
+            cloud and network security. My background sits at the intersection
+            of software engineering, infrastructure, observability, networking,
+            and cybersecurity.
+          </p>
+
+          <p>
+            I enjoy understanding how systems work beneath the surface:
+            how applications communicate, how infrastructure behaves,
+            where failures occur, how telemetry is collected, and how
+            security controls can detect and respond to threats.
+          </p>
+
+          <p>
+            My work has involved production monitoring, application
+            performance, infrastructure telemetry, security monitoring,
+            SIEM engineering, network monitoring, APIs, Linux and Windows
+            environments, and automation.
+          </p>
+
+          <p>
+            I am now deliberately building deeper expertise in cloud security,
+            network security, detection engineering, and defensive security
+            engineering.
+          </p>
+
+        </div>
+
+
+        <div class="portfolio-highlight-box">
+
+          <h3>What I bring</h3>
+
+          <ul class="portfolio-highlight-list">
+            <li>
+              Hands-on infrastructure and systems experience
+            </li>
+
+            <li>
+              Security monitoring and SIEM implementation
+            </li>
+
+            <li>
+              Network and application observability
+            </li>
+
+            <li>
+              Software engineering and automation
+            </li>
+
+            <li>
+              Troubleshooting production environments
+            </li>
+
+            <li>
+              Continuous security and technical learning
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       FOCUS AREAS
+       ===================================================== -->
+
+  <section class="portfolio-section" id="expertise">
+    <div class="portfolio-container">
+
+      <span class="portfolio-section-label">02 — Focus Areas</span>
+
+      <h2 class="portfolio-section-title">
+        Where I am building expertise.
+      </h2>
+
+      <p class="portfolio-section-description">
+        My technical interests are centered around securing and operating
+        modern infrastructure, from the network layer to applications,
+        telemetry, and security operations.
+      </p>
+
+
+      <div class="portfolio-focus-grid">
+
+        <div class="portfolio-focus-card">
+          <div class="portfolio-focus-icon">01</div>
+
+          <h3>Cloud Security</h3>
+
+          <p>
+            Building secure cloud infrastructure, understanding identity,
+            network controls, workloads, configurations, and cloud-native
+            security practices.
+          </p>
+        </div>
+
+
+        <div class="portfolio-focus-card">
+          <div class="portfolio-focus-icon">02</div>
+
+          <h3>Network Security</h3>
+
+          <p>
+            Network monitoring, traffic visibility, segmentation,
+            detection, secure connectivity, and understanding network
+            behavior.
+          </p>
+        </div>
+
+
+        <div class="portfolio-focus-card">
+          <div class="portfolio-focus-icon">03</div>
+
+          <h3>Detection Engineering</h3>
+
+          <p>
+            Security telemetry, detection rules, log analysis,
+            threat detection, incident investigation, and SIEM engineering.
+          </p>
+        </div>
+
+
+        <div class="portfolio-focus-card">
+          <div class="portfolio-focus-icon">04</div>
+
+          <h3>Observability</h3>
+
+          <p>
+            Application and infrastructure monitoring, metrics, logs,
+            performance analysis, alerting, SLOs, and operational visibility.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       PROJECTS
+       ===================================================== -->
+
+  <section class="portfolio-section" id="projects">
+    <div class="portfolio-container">
+
+      <span class="portfolio-section-label">03 — Selected Work</span>
+
+      <h2 class="portfolio-section-title">
+        Projects &amp; Security Engineering
+      </h2>
+
+      <p class="portfolio-section-description">
+        A selection of systems, security projects, monitoring solutions,
+        and engineering work that represent my technical journey.
+      </p>
+
+
+      <div class="portfolio-projects">
+
+
+        <!-- PROJECT 01 -->
+
+        <article class="portfolio-project portfolio-project-featured">
+
+          <span class="portfolio-project-number">
+            PROJECT_01
+          </span>
+
+          <h3>
+            Security Monitoring with Wazuh
+          </h3>
+
+          <p>
+            Designed and implemented security monitoring capabilities using
+            Wazuh across Windows and Linux environments. The work focused on
+            centralized security visibility, detection rules, file integrity
+            monitoring, vulnerability visibility, authentication events,
+            and security investigations.
+          </p>
+
+          <div class="portfolio-project-tags">
+            <span class="portfolio-tag">Wazuh</span>
+            <span class="portfolio-tag">SIEM</span>
+            <span class="portfolio-tag">Windows</span>
+            <span class="portfolio-tag">Linux</span>
+            <span class="portfolio-tag">Sysmon</span>
+            <span class="portfolio-tag">Auditd</span>
+            <span class="portfolio-tag">Security Monitoring</span>
+            <span class="portfolio-tag">Detection Engineering</span>
+          </div>
+
+          <!-- Replace with your real GitHub repository -->
+          <a
+            class="portfolio-project-link"
+            href="https://github.com/mogoaz"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View related work →
+          </a>
+
+        </article>
+
+
+        <!-- PROJECT 02 -->
+
+        <article class="portfolio-project">
+
+          <span class="portfolio-project-number">
+            PROJECT_02
+          </span>
+
+          <h3>
+            Security Pipeline Scanner
+          </h3>
+
+          <p>
+            A security-focused pipeline initiative designed to introduce
+            automated security checks into the software delivery lifecycle.
+            The project explores vulnerability scanning, code security,
+            dependency analysis, container security, and automated security
+            feedback.
+          </p>
+
+          <div class="portfolio-project-tags">
+            <span class="portfolio-tag">DevSecOps</span>
+            <span class="portfolio-tag">CI/CD</span>
+            <span class="portfolio-tag">Trivy</span>
+            <span class="portfolio-tag">Semgrep</span>
+            <span class="portfolio-tag">SAST</span>
+            <span class="portfolio-tag">Container Security</span>
+          </div>
+
+          <!-- Replace with your real repository -->
+          <a
+            class="portfolio-project-link"
+            href="https://github.com/mogoaz"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View project →
+          </a>
+
+        </article>
+
+
+        <!-- PROJECT 03 -->
+
+        <article class="portfolio-project">
+
+          <span class="portfolio-project-number">
+            PROJECT_03
+          </span>
+
+          <h3>
+            Network Performance Monitoring Agent
+          </h3>
+
+          <p>
+            Engineering a network monitoring agent for collecting network
+            telemetry and exposing it through an API-driven architecture.
+            The system focuses on network metrics, availability, traffic,
+            sockets, DNS, interfaces, probing, and integration with an
+            existing monitoring platform.
+          </p>
+
+          <div class="portfolio-project-tags">
+            <span class="portfolio-tag">Go</span>
+            <span class="portfolio-tag">Network Monitoring</span>
+            <span class="portfolio-tag">NPM</span>
+            <span class="portfolio-tag">PostgreSQL</span>
+            <span class="portfolio-tag">REST API</span>
+            <span class="portfolio-tag">Linux</span>
+            <span class="portfolio-tag">Windows</span>
+          </div>
+
+          <!-- Replace with your real repository -->
+          <a
+            class="portfolio-project-link"
+            href="https://github.com/mogoaz"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View project →
+          </a>
+
+        </article>
+
+
+        <!-- PROJECT 04 -->
+
+        <article class="portfolio-project">
+
+          <span class="portfolio-project-number">
+            PROJECT_04
+          </span>
+
+          <h3>
+            Infrastructure &amp; Application Observability
+          </h3>
+
+          <p>
+            Production monitoring and observability work involving application
+            performance, infrastructure telemetry, dashboards, alerting,
+            service health, database visibility, and performance analysis.
+          </p>
+
+          <div class="portfolio-project-tags">
+            <span class="portfolio-tag">Dynatrace</span>
+            <span class="portfolio-tag">APM</span>
+            <span class="portfolio-tag">SLOs</span>
+            <span class="portfolio-tag">DQL</span>
+            <span class="portfolio-tag">RUM</span>
+            <span class="portfolio-tag">Dashboards</span>
+          </div>
+
+          <a
+            class="portfolio-project-link"
+            href="#contact"
+          >
+            Discuss the work →
+          </a>
+
+        </article>
+
+
+        <!-- PROJECT 05 -->
+
+        <article class="portfolio-project">
+
+          <span class="portfolio-project-number">
+            PROJECT_05
+          </span>
+
+          <h3>
+            Security Incident Detection &amp; Response
+          </h3>
+
+          <p>
+            Hands-on investigation and detection work involving authentication
+            anomalies, brute-force activity, credential-related events,
+            security logs, endpoint telemetry, and incident response.
+          </p>
+
+          <div class="portfolio-project-tags">
+            <span class="portfolio-tag">Incident Response</span>
+            <span class="portfolio-tag">Wazuh</span>
+            <span class="portfolio-tag">Authentication</span>
+            <span class="portfolio-tag">Threat Detection</span>
+            <span class="portfolio-tag">Log Analysis</span>
+          </div>
+
+          <a
+            class="portfolio-project-link"
+            href="#contact"
+          >
+            Discuss the work →
+          </a>
+
+        </article>
+
+
+        <!-- PROJECT 06 -->
+
+        <article class="portfolio-project">
+
+          <span class="portfolio-project-number">
+            PROJECT_06
+          </span>
+
+          <h3>
+            Security Architecture &amp; Hardening
+          </h3>
+
+          <p>
+            Practical security engineering focused on identifying gaps in
+            infrastructure, improving monitoring coverage, reducing exposure,
+            strengthening authentication and network controls, and building
+            repeatable security processes.
+          </p>
+
+          <div class="portfolio-project-tags">
+            <span class="portfolio-tag">Security Architecture</span>
+            <span class="portfolio-tag">Hardening</span>
+            <span class="portfolio-tag">Network Security</span>
+            <span class="portfolio-tag">Linux</span>
+            <span class="portfolio-tag">Windows</span>
+            <span class="portfolio-tag">VPN</span>
+          </div>
+
+          <a
+            class="portfolio-project-link"
+            href="#contact"
+          >
+            Discuss the work →
+          </a>
+
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       SECURITY ENGINEERING
+       ===================================================== -->
+
+  <section class="portfolio-section">
+    <div class="portfolio-container">
+
+      <span class="portfolio-section-label">
+        04 — Security Engineering
+      </span>
+
+      <h2 class="portfolio-section-title">
+        From visibility to detection.
+      </h2>
+
+      <p class="portfolio-section-description">
+        My security work is increasingly focused on creating the visibility
+        required to understand systems, detect abnormal behavior, and respond
+        to security events.
+      </p>
+
+
+      <div class="portfolio-security-grid">
+
+        <div class="portfolio-security-item">
+
+          <h3>
+            Security Monitoring
+          </h3>
+
+          <p>
+            Building centralized visibility across infrastructure and
+            endpoints using security telemetry and SIEM technologies.
+          </p>
+
+          <ul>
+            <li>Windows and Linux monitoring</li>
+            <li>Authentication event monitoring</li>
+            <li>File integrity monitoring</li>
+            <li>Vulnerability visibility</li>
+            <li>Security alerting</li>
+          </ul>
+
+        </div>
+
+
+        <div class="portfolio-security-item">
+
+          <h3>
+            Detection Engineering
+          </h3>
+
+          <p>
+            Turning raw security telemetry into useful detections and
+            actionable signals for security operations.
+          </p>
+
+          <ul>
+            <li>Custom detection rules</li>
+            <li>Brute-force detection</li>
+            <li>Credential attack investigation</li>
+            <li>Log-based detection</li>
+            <li>Security event correlation</li>
+          </ul>
+
+        </div>
+
+
+        <div class="portfolio-security-item">
+
+          <h3>
+            Network Visibility
+          </h3>
+
+          <p>
+            Understanding network behavior through telemetry, monitoring,
+            availability checks, traffic analysis, and network performance
+            data.
+          </p>
+
+          <ul>
+            <li>Network performance monitoring</li>
+            <li>Traffic visibility</li>
+            <li>DNS monitoring</li>
+            <li>Socket monitoring</li>
+            <li>Availability monitoring</li>
+          </ul>
+
+        </div>
+
+
+        <div class="portfolio-security-item">
+
+          <h3>
+            DevSecOps
+          </h3>
+
+          <p>
+            Integrating security checks into development and delivery
+            pipelines so security becomes part of the engineering lifecycle.
+          </p>
+
+          <ul>
+            <li>SAST</li>
+            <li>Dependency scanning</li>
+            <li>Container scanning</li>
+            <li>Vulnerability management</li>
+            <li>Automated security checks</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       TECHNOLOGY
+       ===================================================== -->
+
+  <section class="portfolio-section" id="skills">
+    <div class="portfolio-container">
+
+      <span class="portfolio-section-label">
+        05 — Technology
+      </span>
+
+      <h2 class="portfolio-section-title">
+        Technologies I work with.
+      </h2>
+
+      <p class="portfolio-section-description">
+        A growing technical stack spanning engineering, infrastructure,
+        observability, networking, and cybersecurity.
+      </p>
+
+
+      <div class="portfolio-skills">
+
+        <span class="portfolio-skill">Go</span>
+        <span class="portfolio-skill">Python</span>
+        <span class="portfolio-skill">Java</span>
+        <span class="portfolio-skill">.NET</span>
+
+        <span class="portfolio-skill">Linux</span>
+        <span class="portfolio-skill">Windows Server</span>
+        <span class="portfolio-skill">Kubernetes</span>
+
+        <span class="portfolio-skill">AWS</span>
+        <span class="portfolio-skill">GCP</span>
+        <span class="portfolio-skill">VMware</span>
+
+        <span class="portfolio-skill">PostgreSQL</span>
+        <span class="portfolio-skill">Oracle</span>
+        <span class="portfolio-skill">SQL Server</span>
+
+        <span class="portfolio-skill">Wazuh</span>
+        <span class="portfolio-skill">Sysmon</span>
+        <span class="portfolio-skill">Auditd</span>
+
+        <span class="portfolio-skill">Dynatrace</span>
+        <span class="portfolio-skill">DQL</span>
+        <span class="portfolio-skill">APM</span>
+
+        <span class="portfolio-skill">REST APIs</span>
+        <span class="portfolio-skill">Docker</span>
+        <span class="portfolio-skill">Git</span>
+
+        <span class="portfolio-skill">Semgrep</span>
+        <span class="portfolio-skill">Trivy</span>
+        <span class="portfolio-skill">OWASP ZAP</span>
+
+        <span class="portfolio-skill">Network Security</span>
+        <span class="portfolio-skill">SIEM</span>
+        <span class="portfolio-skill">Detection Engineering</span>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       JOURNEY
+       ===================================================== -->
+
+  <section class="portfolio-section">
+    <div class="portfolio-container">
+
+      <span class="portfolio-section-label">
+        06 — Journey
+      </span>
+
+      <h2 class="portfolio-section-title">
+        Building toward security engineering.
+      </h2>
+
+      <p class="portfolio-section-description">
+        My career is evolving from software and infrastructure engineering
+        toward deeper specialization in security.
+      </p>
+
+
+      <div class="portfolio-timeline">
+
+
+        <div class="portfolio-timeline-item">
+
+          <span class="portfolio-timeline-dot"></span>
+
+          <div class="portfolio-timeline-date">
+            FOUNDATION
+          </div>
+
+          <h3>
+            Software &amp; Systems Engineering
+          </h3>
+
+          <p>
+            Built foundations in programming, systems, databases, APIs,
+            Linux, Windows, infrastructure, and production troubleshooting.
+          </p>
+
+        </div>
+
+
+        <div class="portfolio-timeline-item">
+
+          <span class="portfolio-timeline-dot"></span>
+
+          <div class="portfolio-timeline-date">
+            ENGINEERING
+          </div>
+
+          <h3>
+            Product Engineering &amp; Observability
+          </h3>
+
+          <p>
+            Worked with production systems, application performance,
+            infrastructure monitoring, dashboards, alerting, and
+            operational visibility.
+          </p>
+
+        </div>
+
+
+        <div class="portfolio-timeline-item">
+
+          <span class="portfolio-timeline-dot"></span>
+
+          <div class="portfolio-timeline-date">
+            SECURITY
+          </div>
+
+          <h3>
+            Security Monitoring &amp; Detection
+          </h3>
+
+          <p>
+            Expanded into SIEM, endpoint monitoring, vulnerability
+            management, incident investigation, security architecture,
+            and detection engineering.
+          </p>
+
+        </div>
+
+
+        <div class="portfolio-timeline-item">
+
+          <span class="portfolio-timeline-dot"></span>
+
+          <div class="portfolio-timeline-date">
+            CURRENT DIRECTION
+          </div>
+
+          <h3>
+            Cloud &amp; Network Security
+          </h3>
+
+          <p>
+            Developing deeper expertise in cloud security, network defense,
+            security engineering, and detection-driven security operations.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       CONTACT
+       ===================================================== -->
+
+  <section class="portfolio-contact" id="contact">
+
+    <div class="portfolio-container">
+
+      <span class="portfolio-section-label">
+        07 — Contact
+      </span>
+
+      <h2>
+        Let's build more secure systems.
+      </h2>
+
+      <p>
+        I am interested in opportunities, technical collaborations,
+        security engineering projects, cloud security, network security,
+        and conversations around building resilient technology.
+      </p>
+
+      <div class="portfolio-hero-actions"
+           style="justify-content: center;">
+
+        <!-- CHANGE THIS EMAIL -->
+        <a
+          class="portfolio-button portfolio-button-primary"
+          href="mailto:mogoacaleb01@gmail.com"
+        >
+          Email Me
+        </a>
+
+        <!-- CHANGE THIS LINK IF NEEDED -->
+        <a
+          class="portfolio-button portfolio-button-secondary"
+          href="https://github.com/mogoaz"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+
+        <!-- CHANGE THIS TO YOUR LINKEDIN -->
+        <a
+          class="portfolio-button portfolio-button-secondary"
+          href="https://www.linkedin.com/in/caleb-moruri/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="portfolio-footer">
+
+    <div class="portfolio-container">
+
+      <div class="portfolio-footer-inner">
+
+        <p>
+          © 2026 Mogoa. Built with Jekyll.
+        </p>
+
+        <div class="portfolio-footer-links">
+
+          <a href="#about">
+            About
+          </a>
+
+          <a href="#projects">
+            Projects
+          </a>
+
+          <a href="#skills">
+            Skills
+          </a>
+
+          <a href="#contact">
+            Contact
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</div>
