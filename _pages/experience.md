@@ -229,41 +229,7 @@ permalink: /experience/
           </p>
         </div>
 
-        <div>
-          <h3 style="color: var(--heading); font-size: 1.05rem; margin-bottom: 6px;">
-            Technical Support Specialist
-            <span style="color: var(--muted); font-weight: 500;">· Chuka Level V Hospital · 2024</span>
-          </h3>
-          <p class="portfolio-description">
-            Maintained hospital databases and patient records, and
-            supported Kenya EMR system upgrades with minimal
-            downtime.
-          </p>
-        </div>
-
-        <div>
-          <h3 style="color: var(--heading); font-size: 1.05rem; margin-bottom: 6px;">
-            Software Tester (Attaché)
-            <span style="color: var(--muted); font-weight: 500;">· Alan & Dick Telecommunication · 2023</span>
-          </h3>
-          <p class="portfolio-description">
-            Installed and configured routers across multiple
-            sites, integrating them into the office network.
-          </p>
-        </div>
-
-        <div>
-          <h3 style="color: var(--heading); font-size: 1.05rem; margin-bottom: 6px;">
-            Data Analyst Intern
-            <span style="color: var(--muted); font-weight: 500;">· Nairobi Metropolitan Service (NMS) · 2022</span>
-          </h3>
-          <p class="portfolio-description">
-            Collected and analyzed data for urban development
-            projects and supported data management during
-            emergency response efforts.
-          </p>
-        </div>
-
+        
       </div>
 
     </div>
