@@ -18,7 +18,7 @@ permalink: /security/
 
     <p class="portfolio-description">
 
-      Security isn't a checklist I run once — it's a discipline
+      Security isn't a checklist I run once. It's a discipline
       applied to how systems are built, watched, and improved
       over time. As the person leading security at Nathan Claire
       Group (NCG), that means owning the company's security
@@ -56,8 +56,8 @@ permalink: /security/
           <p>
 
             You can't secure what you can't see. Before anything
-            else, I get telemetry flowing — endpoint events,
-            network traffic, application logs — so the
+            else, I get telemetry flowing across endpoint events,
+            network traffic, and application logs, so the
             environment is observable end to end.
 
           </p>
@@ -98,7 +98,7 @@ permalink: /security/
 
           <p>
 
-            An alert nobody investigates isn't security — it's
+            An alert nobody investigates isn't security. It's
             noise with a timestamp. I build the workflows needed
             to actually close the loop on what gets flagged.
 
@@ -119,9 +119,9 @@ permalink: /security/
 
           <p>
 
-            In practice: hardening production servers — closing
+            In practice: hardening production servers by closing
             unnecessary services, enforcing least-privilege access,
-            patching known vulnerabilities — and building
+            and patching known vulnerabilities, then building
             auto-remediation so common alert types get contained
             automatically instead of waiting on manual response.
 
@@ -228,7 +228,7 @@ permalink: /security/
 
         Much of my recent work has meant aligning monitoring and
         controls to <strong>SOC 2 Type II</strong> and
-        <strong>ISO 27001:2022</strong> — not as a paperwork
+        <strong>ISO 27001:2022</strong>, not as a paperwork
         exercise, but as a forcing function for building the
         visibility and controls that make an environment
         genuinely more defensible.

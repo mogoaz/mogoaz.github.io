@@ -104,7 +104,7 @@ permalink: /about/
 
       <p class="portfolio-description">
 
-        Every system tells a story if you know where to look — a
+        Every system tells a story if you know where to look. A
         spike in auth failures, a process that shouldn't be
         talking to the internet, a dashboard that's a little too
         quiet. I got into engineering because I liked building
@@ -118,7 +118,7 @@ permalink: /about/
 
         That question is what turned me from someone who builds
         systems into someone who
-        <span class="portfolio-gradient">defends them</span> —
+        <span class="portfolio-gradient">defends them</span>,
         and it's the same one pointing toward what's next: making
         real security practices accessible to organizations that
         have never had a security team, not just the ones who can
