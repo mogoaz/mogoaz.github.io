@@ -166,6 +166,23 @@ permalink: /experience/
     <div style="margin-top: 70px;">
 
       <h2>
+        Education
+      </h2>
+
+      <p class="portfolio-description">
+
+        <strong style="color: var(--heading);">BSc in Computer Science</strong>
+        <br />
+        Chuka University, Kenya · September 2020 – November 2024
+
+      </p>
+
+    </div>
+
+
+    <div style="margin-top: 70px;">
+
+      <h2>
         Training & Certification
       </h2>
 
