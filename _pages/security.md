@@ -21,7 +21,7 @@ permalink: /security/
       Security isn't a checklist I run once. It's a discipline
       applied to how systems are built, watched, and improved
       over time. As the person leading security at Nathan Claire
-      Group (NCG), that means owning the company's security
+      Africa (NCG), that means owning the company's security
       architecture as a whole, not just individual tools. Here's
       the process behind that, and the toolkit that supports it.
 
@@ -142,22 +142,28 @@ permalink: /security/
 
       <p class="portfolio-description">
 
-        Grouped by where each one fits in the stack.
+        Security is the focus, but the work draws on a wider
+        stack. Grouped by where each one fits.
 
       </p>
 
       <div style="margin-top: 30px;">
 
         <h3 style="color: var(--heading); font-size: 1.05rem; margin-bottom: 14px;">
-          Detection & SIEM
+          Security & Detection
         </h3>
 
         <div class="portfolio-tags">
 
           <span class="portfolio-tag">Wazuh</span>
+          <span class="portfolio-tag">Microsoft Sentinel</span>
           <span class="portfolio-tag">Sysmon</span>
           <span class="portfolio-tag">Auditd</span>
           <span class="portfolio-tag">fail2ban</span>
+          <span class="portfolio-tag">eBPF</span>
+          <span class="portfolio-tag">Windows ETW</span>
+          <span class="portfolio-tag">MITRE ATT&amp;CK</span>
+          <span class="portfolio-tag">SOC 2 Type II</span>
           <span class="portfolio-tag">Auto-Remediation</span>
           <span class="portfolio-tag">Server Hardening</span>
 
@@ -185,15 +191,17 @@ permalink: /security/
       <div style="margin-top: 26px;">
 
         <h3 style="color: var(--heading); font-size: 1.05rem; margin-bottom: 14px;">
-          Network & Cloud
+          Cloud & Infrastructure
         </h3>
 
         <div class="portfolio-tags">
 
-          <span class="portfolio-tag">Go</span>
+          <span class="portfolio-tag">AWS (IAM, VPC, CloudTrail)</span>
+          <span class="portfolio-tag">Docker</span>
+          <span class="portfolio-tag">Linux</span>
+          <span class="portfolio-tag">Bash</span>
+          <span class="portfolio-tag">Git</span>
           <span class="portfolio-tag">Network Monitoring</span>
-          <span class="portfolio-tag">Cloud Security</span>
-          <span class="portfolio-tag">REST APIs</span>
 
         </div>
 
@@ -210,6 +218,46 @@ permalink: /security/
           <span class="portfolio-tag">Dynatrace</span>
           <span class="portfolio-tag">APM</span>
           <span class="portfolio-tag">DQL</span>
+          <span class="portfolio-tag">OpenTelemetry</span>
+          <span class="portfolio-tag">Datadog</span>
+
+        </div>
+
+      </div>
+
+      <div style="margin-top: 26px;">
+
+        <h3 style="color: var(--heading); font-size: 1.05rem; margin-bottom: 14px;">
+          Languages
+        </h3>
+
+        <div class="portfolio-tags">
+
+          <span class="portfolio-tag">Go</span>
+          <span class="portfolio-tag">Python</span>
+          <span class="portfolio-tag">Java</span>
+          <span class="portfolio-tag">Kotlin</span>
+          <span class="portfolio-tag">SQL</span>
+          <span class="portfolio-tag">HTML &amp; CSS</span>
+
+        </div>
+
+      </div>
+
+      <div style="margin-top: 26px;">
+
+        <h3 style="color: var(--heading); font-size: 1.05rem; margin-bottom: 14px;">
+          Frameworks & Tools
+        </h3>
+
+        <div class="portfolio-tags">
+
+          <span class="portfolio-tag">Next.js</span>
+          <span class="portfolio-tag">Flask</span>
+          <span class="portfolio-tag">Redis</span>
+          <span class="portfolio-tag">PostgreSQL</span>
+          <span class="portfolio-tag">REST APIs</span>
+          <span class="portfolio-tag">Android SDK</span>
 
         </div>
 

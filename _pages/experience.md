@@ -34,11 +34,18 @@ permalink: /experience/
 
       <p class="portfolio-description">
 
-        I lead security at <strong>Nathan Claire Group (NCG)</strong>,
-        where I'm responsible for designing the company's security
-        architecture end to end, deciding how detection, response,
-        and infrastructure hardening fit together as one program
-        rather than just operating individual tools.
+        I lead security at <strong>Nathan Claire Africa (NCG)</strong>,
+        where I own the Edge platform's network and security
+        monitoring agent end to end, from architecture through
+        detection logic to delivery. That includes building
+        eBPF-based kernel telemetry capture, TCP anomaly and RTT-based
+        detection, and Windows ETW correlation to trace suspicious
+        network activity back to the process that caused it. I also
+        support the company's wider security program: SOC 2 Type II
+        compliance, Microsoft Sentinel SIEM tuning, and Wazuh SIEM
+        operations across a mixed Windows/Linux fleet, along with the
+        incident-response playbooks and documentation that keep it
+        usable by the rest of the team.
 
       </p>
 
@@ -59,9 +66,31 @@ permalink: /experience/
 
         <p>
 
-          Deploying and operating SIEM tooling, writing detection
-          rules, and running investigations across endpoint and
-          infrastructure telemetry.
+          Deploying and tuning SIEM platforms (Wazuh, Microsoft
+          Sentinel), writing detection rules mapped to MITRE
+          ATT&amp;CK, and running investigations across endpoint
+          and network telemetry.
+
+        </p>
+
+      </article>
+
+
+      <article class="portfolio-card">
+
+        <span class="portfolio-card-number">
+          FOCUS
+        </span>
+
+        <h3>
+          Kernel-Level Telemetry
+        </h3>
+
+        <p>
+
+          Capturing host and network signal with eBPF and Windows
+          ETW, surfacing activity user-space tools miss without
+          the overhead of full packet logging.
 
         </p>
 
@@ -82,7 +111,8 @@ permalink: /experience/
 
           Building automated security scanning into software
           delivery pipelines: static analysis, dependency and
-          container scanning, CI/CD integration.
+          container scanning, CI/CD integration, and now expanding
+          into secrets detection and SCA.
 
         </p>
 
@@ -161,18 +191,80 @@ permalink: /experience/
     <div style="margin-top: 70px;">
 
       <h2>
-        Where this is heading
+        Career Timeline
       </h2>
 
       <p class="portfolio-description">
 
-        Longer term, I'm working toward building a cybersecurity
-        practice focused on serving small and medium businesses
-        across Africa, bringing enterprise-grade security
-        monitoring and engineering practices to organizations that
-        typically can't access them.
+        The roles that shaped the path into security, each one
+        building on the last.
 
       </p>
+
+      <div style="margin-top: 34px; display: flex; flex-direction: column; gap: 28px;">
+
+        <div>
+          <h3 style="color: var(--heading); font-size: 1.05rem; margin-bottom: 6px;">
+            Product Manager & Security Engineer
+            <span style="color: var(--muted); font-weight: 500;">· Nathan Claire Africa (NCG) · 2026 – Present</span>
+          </h3>
+          <p class="portfolio-description">
+            Own the Edge platform's security architecture end to
+            end, from kernel-level telemetry to detection logic,
+            SIEM operations, and incident response.
+          </p>
+        </div>
+
+        <div>
+          <h3 style="color: var(--heading); font-size: 1.05rem; margin-bottom: 6px;">
+            Site Reliability Engineer
+            <span style="color: var(--muted); font-weight: 500;">· Nathan Claire Africa (NCG) · Jan 2025 – 2026</span>
+          </h3>
+          <p class="portfolio-description">
+            Deployed and stabilized monitoring across client
+            environments, evaluated observability gaps, and
+            researched OpenTelemetry to inform future architecture.
+            Recognized twice with Honorable Mentions for impact
+            and innovation.
+          </p>
+        </div>
+
+        <div>
+          <h3 style="color: var(--heading); font-size: 1.05rem; margin-bottom: 6px;">
+            Technical Support Specialist
+            <span style="color: var(--muted); font-weight: 500;">· Chuka Level V Hospital · 2024</span>
+          </h3>
+          <p class="portfolio-description">
+            Maintained hospital databases and patient records, and
+            supported Kenya EMR system upgrades with minimal
+            downtime.
+          </p>
+        </div>
+
+        <div>
+          <h3 style="color: var(--heading); font-size: 1.05rem; margin-bottom: 6px;">
+            Software Tester (Attaché)
+            <span style="color: var(--muted); font-weight: 500;">· Alan & Dick Telecommunication · 2023</span>
+          </h3>
+          <p class="portfolio-description">
+            Installed and configured routers across multiple
+            sites, integrating them into the office network.
+          </p>
+        </div>
+
+        <div>
+          <h3 style="color: var(--heading); font-size: 1.05rem; margin-bottom: 6px;">
+            Data Analyst Intern
+            <span style="color: var(--muted); font-weight: 500;">· Nairobi Metropolitan Service (NMS) · 2022</span>
+          </h3>
+          <p class="portfolio-description">
+            Collected and analyzed data for urban development
+            projects and supported data management during
+            emergency response efforts.
+          </p>
+        </div>
+
+      </div>
 
     </div>
 
