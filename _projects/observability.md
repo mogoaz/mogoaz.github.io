@@ -25,6 +25,26 @@ permalink: /projects/observability/
     </p>
 
 
+    <div style="margin-top: 40px;">
+
+      <h2>
+        The Challenge
+      </h2>
+
+      <p class="portfolio-description">
+
+        When something slows down in production, the real
+        question is rarely "is it slow" — it's "where, for whom,
+        and since when." Without metrics, logs, and traces tied
+        together, answering that meant jumping between disconnected
+        tools and guessing at correlation instead of seeing it
+        directly.
+
+      </p>
+
+    </div>
+
+
     <div class="portfolio-grid">
 
 
@@ -93,6 +113,28 @@ permalink: /projects/observability/
     <div style="margin-top: 70px;">
 
       <h2>
+        How It Works
+      </h2>
+
+      <p class="portfolio-description">
+
+        Dynatrace's APM and real user monitoring auto-discover
+        services and automatically correlate metrics, logs, and
+        distributed traces against a single topology, rather than
+        requiring each signal to be stitched together manually.
+        Dynatrace Query Language (DQL) is used to build custom
+        queries and dashboards on top of that data, and alerting
+        thresholds are tuned against real baselines rather than
+        arbitrary static numbers, to keep noise down.
+
+      </p>
+
+    </div>
+
+
+    <div style="margin-top: 70px;">
+
+      <h2>
         Technologies
       </h2>
 
@@ -120,6 +162,15 @@ permalink: /projects/observability/
         logs, and traces into a single operational picture, and
         to design alerting that reduces noise while catching
         real issues early.
+
+      </p>
+
+      <p class="portfolio-description">
+
+        It also reinforced how much of observability is really
+        about baselines, not thresholds — a fixed alert that made
+        sense on day one becomes either useless or a source of
+        alert fatigue once real traffic patterns settle in.
 
       </p>
 

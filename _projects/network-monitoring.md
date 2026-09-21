@@ -26,6 +26,26 @@ permalink: /projects/network-monitoring/
     </p>
 
 
+    <div style="margin-top: 40px;">
+
+      <h2>
+        The Challenge
+      </h2>
+
+      <p class="portfolio-description">
+
+        Network problems — latency spikes, packet loss, DNS
+        resolution failures — often show up first as vague user
+        complaints, with no easy way to correlate them to what's
+        actually happening at the network layer in real time.
+        Off-the-shelf tools either cost more than the problem
+        warranted or didn't expose the specific telemetry needed.
+
+      </p>
+
+    </div>
+
+
     <div class="portfolio-grid">
 
 
@@ -94,6 +114,29 @@ permalink: /projects/network-monitoring/
     <div style="margin-top: 70px;">
 
       <h2>
+        How It Works
+      </h2>
+
+      <p class="portfolio-description">
+
+        The agent, written in Go, runs on monitored
+        infrastructure and combines two approaches: active
+        probing — scheduled checks against key targets to
+        measure reachability and latency — with passive
+        observation of local network interfaces, socket state,
+        and DNS resolution. Collected telemetry is persisted to
+        PostgreSQL and exposed through a REST API, so it can be
+        queried directly or wired into dashboards and alerting
+        elsewhere.
+
+      </p>
+
+    </div>
+
+
+    <div style="margin-top: 70px;">
+
+      <h2>
         Technologies
       </h2>
 
@@ -120,6 +163,16 @@ permalink: /projects/network-monitoring/
         Building this agent deepened my understanding of
         network telemetry collection, probing design, and how
         to expose monitoring data through a well-structured API.
+
+      </p>
+
+      <p class="portfolio-description">
+
+        Writing it in Go also forced discipline around
+        concurrency — probing dozens of targets on independent
+        schedules without one slow check blocking the rest meant
+        thinking carefully about goroutines, timeouts, and
+        failure isolation from the start.
 
       </p>
 
