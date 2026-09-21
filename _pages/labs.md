@@ -27,23 +27,40 @@ permalink: /labs/
 
     <div class="portfolio-projects">
 
-      <article
-        class="portfolio-project"
-        style="text-align: center; padding: 50px 30px;"
-      >
+      <article class="portfolio-project">
 
-        <p class="portfolio-description" style="margin: 0;">
+        <span class="portfolio-card-number">
+          01
+        </span>
 
-          First writeup in progress. Check back soon, or follow
-          along on
-          <a
-            href="https://github.com/mogoaz"
-            target="_blank"
-            rel="noopener noreferrer"
-            style="color: var(--blue); text-decoration: underline;"
-          >GitHub</a>.
+        <h3>
+          Console Recovery & Hardware Fault Diagnosis
+        </h3>
+
+        <p>
+
+          Diagnosing a counterfeit USB adapter and running a full
+          Cisco IOS password recovery to reach a switch, then
+          validating clean SNMP, STP, VLAN, and CPU metrics, and
+          catching a real power supply fault the moment the agent
+          was pointed at it.
 
         </p>
+
+        <div class="portfolio-tags">
+
+          <span class="portfolio-tag">Cisco IOS</span>
+          <span class="portfolio-tag">Ubuntu</span>
+          <span class="portfolio-tag">Hardware Diagnostics</span>
+
+        </div>
+
+        <a
+          class="portfolio-project-link"
+          href="/labs/switch-recovery/"
+        >
+          Read writeup →
+        </a>
 
       </article>
 
