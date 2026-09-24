@@ -163,6 +163,59 @@
     }
 
 
+    .portfolio-nav-toggle {
+      display: none;
+
+      flex-direction: column;
+
+      justify-content: center;
+
+      gap: 5px;
+
+      width: 34px;
+
+      height: 34px;
+
+      background: none;
+
+      border: none;
+
+      cursor: pointer;
+
+      padding: 0;
+    }
+
+
+    .portfolio-nav-toggle span {
+      display: block;
+
+      width: 100%;
+
+      height: 2px;
+
+      background: var(--heading);
+
+      border-radius: 2px;
+
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+
+    .portfolio-nav.is-open .portfolio-nav-toggle span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+
+    .portfolio-nav.is-open .portfolio-nav-toggle span:nth-child(2) {
+      opacity: 0;
+    }
+
+
+    .portfolio-nav.is-open .portfolio-nav-toggle span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+
     .portfolio-nav-links a {
       color: var(--muted);
 
@@ -730,6 +783,40 @@
     }
 
 
+    .portfolio-code {
+      display: block;
+
+      margin: 18px 0;
+
+      padding: 18px 20px;
+
+      background: var(--bg-secondary);
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius: 10px;
+
+      overflow-x: auto;
+
+      color: #a7f3d0;
+
+      font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Consolas,
+        monospace;
+
+      font-size: 0.82rem;
+
+      line-height: 1.7;
+
+      white-space: pre;
+    }
+
+
     .portfolio-project-link {
       color: var(--blue);
 
@@ -883,8 +970,64 @@
       }
 
 
+      .portfolio-nav-toggle {
+        display: flex;
+      }
+
+
       .portfolio-nav-links {
-        display: none;
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 4px;
+
+        position: absolute;
+
+        top: 100%;
+
+        left: 0;
+
+        right: 0;
+
+        background: var(--bg-secondary);
+
+        border-bottom:
+          1px solid
+          var(--border);
+
+        padding: 10px 14px 16px;
+
+        max-height: 0;
+
+        overflow: hidden;
+
+        opacity: 0;
+
+        transition:
+          max-height 0.25s ease,
+          opacity 0.2s ease;
+      }
+
+
+      .portfolio-nav-links a {
+        width: 100%;
+
+        padding: 12px 4px;
+      }
+
+
+      .portfolio-nav.is-open .portfolio-nav-links {
+        max-height: 420px;
+
+        opacity: 1;
+      }
+
+
+      .portfolio-nav {
+        position: relative;
       }
 
 
@@ -973,6 +1116,18 @@
           </a>
 
         </div>
+
+
+        <button
+          class="portfolio-nav-toggle"
+          type="button"
+          aria-label="Toggle navigation menu"
+          onclick="document.querySelector('.portfolio-nav').classList.toggle('is-open')"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
       </div>
 
