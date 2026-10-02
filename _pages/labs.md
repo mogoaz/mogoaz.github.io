@@ -101,6 +101,43 @@ permalink: /labs/
 
       </article>
 
+
+      <article class="portfolio-project">
+
+        <span class="portfolio-card-number">
+          03
+        </span>
+
+        <h3>
+          Connecting Independent Scanners Into One Security Signal
+        </h3>
+
+        <p>
+
+          Wiring SAST, SCA, and secrets scanning into CI/CD, and
+          the DAST problem: dynamic testing needs a live target,
+          not just another pipeline step, plus consolidating four
+          tools' output into one usable signal.
+
+        </p>
+
+        <div class="portfolio-tags">
+
+          <span class="portfolio-tag">Semgrep</span>
+          <span class="portfolio-tag">OWASP ZAP</span>
+          <span class="portfolio-tag">CI/CD</span>
+
+        </div>
+
+        <a
+          class="portfolio-project-link"
+          href="/labs/pipeline-scanner/"
+        >
+          Read writeup →
+        </a>
+
+      </article>
+
     </div>
 
   </div>
